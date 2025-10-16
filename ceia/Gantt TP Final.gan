@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt TP FInal" company="" webLink="http://" view-date="2025-05-26" view-index="0" gantt-divider-location="1122" resource-divider-location="579" version="3.3.3312" locale="es_ES">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd10" name="Id." width="83" order="0"/>
+        <field id="tpd3" name="Nombre" width="654" order="1"/>
+        <field id="tpd4" name="Fecha de inicio" width="66" order="2"/>
+        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <field id="tpd5" name="Fecha de fin" width="92" order="3"/>
+        <field id="tpd9" name="Antecesores" width="210" order="4"/>
+        <option id="taskLabelUp" value="taskDates"/>
+        <option id="taskLabelRight" value="name"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="488" order="0"/>
+        <field id="1" name="Función" width="85" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="eba4819d67054ff29245b09239c971c0" name="1. Etapa de investigación." meeting="false" start="2024-12-03" duration="10" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+            <task id="43" uid="f3b7b8f3d7624b528336f1196eedf82d" name="1.1. Investigar y repasar el material de la CEIA  sobre técnicas de detección de objetos." meeting="false" start="2024-12-03" duration="10" complete="0" expand="false"/>
+            <task id="2" uid="49762b7e367345c5a63cb156fea5da94" name="1.2. Evaluar y contratar API de ChatGPT." meeting="false" start="2024-12-03" duration="4" complete="0" expand="true"/>
+            <task id="3" uid="fd3838eb74a64e45ad12d5d293878995" name="1.3. Evaluar y contratar la plataforma para entenamiento de GPU." meeting="false" start="2024-12-03" duration="4" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="827c1f19b6bd4c4196385d737cd8dba9" name="2. Etapa de preprocesamiento y análisis exploratorio de los datos" meeting="false" start="2024-12-17" duration="16" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+            <task id="7" uid="c42f42bd55cb4e4ba143ffee2c343a30" name="2.1. Búsqueda y selección de 3 datasets." meeting="false" start="2024-12-17" duration="6" complete="0" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="8" uid="2fb5757c781f4cb1a327a2c4e3aefd35" name="2.2. Etiquetado de imágenes." meeting="false" start="2024-12-25" duration="10" complete="0" expand="true"/>
+        </task>
+        <task id="9" uid="a040df4a803042c581558b18e0cfc505" name="3. Etapa del desarrollo del modelo de detección de objetos." meeting="false" start="2025-01-08" duration="50" complete="0" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="10" uid="6d855d449c284fcda63051f14b779889" name="3.1. Evaluar los diferentes modelos que se adecuen al problema y a los datasets elegidos." meeting="false" start="2025-01-08" duration="10" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" uid="5fc1b9f1aa9b46088f95195e4869d0a9" name="3.2. Entrenar y evaluar el modelo base." meeting="false" start="2025-01-22" duration="10" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" uid="d1b577259b8d424cb5c7101d51baa354" name="3.3. Realizar fine tunning del modelo base." meeting="false" start="2025-02-05" duration="10" complete="0" expand="true">
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" uid="226489c3aeaa41329093f530065b91d0" name="3.4. Revisión y ajustes necesarios a partir del modelo adaptado." meeting="false" start="2025-02-19" duration="10" complete="0" expand="false">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" uid="3ecc7a95afb1464184526aa76660e7ad" name="3.5. Evaluación preeliminar de los resultados." meeting="false" start="2025-03-05" duration="4" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="15" uid="6bb3b035a92e49a59c719fa19c17bffc" name="3.6. Desarrollo de la API para comunicación con la aplicación para celulares." meeting="false" start="2025-03-11" duration="4" complete="0" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" uid="10c1a60423c24958a4511f82f0d4f8b2" name="3.7. Pruebas unitarias y de integración de la API." meeting="false" start="2025-03-17" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="17" uid="4c58161d4ac84bb987eb956759a9a6b6" name="4. Etapa del desarrollo del modelo de predicción de recetas." meeting="false" start="2025-01-08" duration="6" complete="0" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="18" uid="23380ac21c5c4942abe59d92b8ce95ae" name="4.1. Desarrollo de la API para comunicación con la aplicación para celulares." meeting="false" start="2025-01-08" duration="2" complete="0" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="19" uid="c3bc46f29c7245f5ba2b96ab5972bcdd" name="4.2. Desarrollo de interacción con la API de ChatGPT." meeting="false" start="2025-01-10" duration="2" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" uid="68c7d3c6aadf44ce8582d916351dd77f" name="4.3. Pruebas unitarias y de integración de la API propia." meeting="false" start="2025-01-14" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="21" uid="d81bbe1dea244d0f9d21a96a4785a9fb" name="5. Etapa del desarrollo de la aplicación para celulares." meeting="false" start="2025-03-19" duration="24" complete="0" expand="true">
+            <depend id="29" type="2" difference="0" hardness="Strong"/>
+            <task id="22" uid="49fdad9f6d2546feb75ff49ce02a8414" name="5.1. Armar la estructura general de la aplicación." meeting="false" start="2025-03-19" duration="4" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" uid="175a4d21dc2b4719bf8a9bb6f4fe1b59" name="5.2. Formulario para la carga de foto y otros datos básicos necesarios para la detección." meeting="false" start="2025-03-25" duration="6" complete="0" expand="true">
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" uid="e9a5e79e070f4628a5850c0f4133f33e" name="5.3. Pantalla con el listado de recomendaciones." meeting="false" start="2025-04-02" duration="4" complete="0" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" uid="dad0c486c2044bc18e826d0ec3a8233a" name="5.4. Pantalla con el detalle de recomendaciones." meeting="false" start="2025-04-08" duration="4" complete="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" uid="a8f9a305cd62485991543d0379af3264" name="5.5. Pantalla con el listado histórico de recomendaciones." meeting="false" start="2025-04-14" duration="4" complete="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" uid="f2e1492bc9d8435f9a7cbceac5318faa" name="5.6. Pantalla con el detalle histórico de recomendaciones." meeting="false" start="2025-04-18" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="28" uid="739c95ee1ae34b19b9d468cb780995b3" name="6. Etapa de User Acceptance Testing (UAT)." meeting="false" start="2025-04-22" duration="10" complete="0" expand="true">
+            <depend id="34" type="2" difference="0" hardness="Strong"/>
+            <task id="29" uid="039f2115f1ae44b88f9d79c140c4860e" name="6.1. Ciclo de pruebas 1 de la aplicación para celulares." meeting="false" start="2025-04-22" duration="4" complete="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="30" uid="852622743ad54167baf041cfb2a4e472" name="6.2. Correcciones de los defectos o errores detectados en el ciclo de pruebas 1." meeting="false" start="2025-04-28" duration="2" complete="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" uid="5a3e5af8c7d247b7a208549aa280147d" name="6.3. Ciclo de pruebas 2 de la aplicación para celulares." meeting="false" start="2025-04-30" duration="2" complete="0" expand="true">
+                <depend id="32" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="32" uid="301a5c43739a42a888e4e8ba129eae81" name="6.4. Correcciones de los defectos o errores detectados en el ciclo de pruebas 2." meeting="false" start="2025-05-02" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="33" uid="330f70a7b6604c15b1fcd407439fbd99" name="7. Etapa de documentación." meeting="false" start="2025-05-06" duration="12" complete="0" expand="true">
+            <depend id="39" type="2" difference="0" hardness="Strong"/>
+            <task id="34" uid="2c60e0c8d6fe4cfbbade799f4f40561c" name="7.1. Elaboración del manual de usuario para la aplicación para celulares." meeting="false" start="2025-05-06" duration="6" complete="0" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="35" uid="400822cd83124eacaba00175ff6a19dc" name="7.2. Elaboración del documento de la arquitectura a alto nivel." meeting="false" start="2025-05-14" duration="2" complete="0" expand="true">
+                <depend id="36" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="36" uid="a1e5f1e34d3b4c47a8178225eb87356d" name="7.3. Elaboración de reporte de las métricas del modelo de detección de objeto." meeting="false" start="2025-05-16" duration="2" complete="0" expand="true">
+                <depend id="37" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="37" uid="13848eb756974f7b8e09f895b2e3e431" name="7.4. Elaboración del video o documento con ejemplo de funcionamiento de la aplicación para celular." meeting="false" start="2025-05-20" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="38" uid="75d2af97cb234ca0957d397e50b791f3" name="8. Etapa de cierre." meeting="false" start="2025-05-22" duration="28" complete="0" expand="true">
+            <task id="39" uid="8fc4e25423e94461b5190c9deb2eeee4" name="8.1. Redacción de informes de avance." meeting="false" start="2025-05-22" duration="1" complete="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="40" uid="448e9f44c40349e4b04a9aa96514ef32" name="8.2. Redacción de la memoria final." meeting="false" start="2025-05-23" duration="10" complete="0" expand="true">
+                <depend id="41" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="41" uid="f45e20d38fb843d98875058277564fec" name="8.3. Elaboración y preparación de la presentación final." meeting="false" start="2025-06-06" duration="2" complete="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="47" uid="13f040d3187546fbbd6d99bf50e621e5" name="8.4. Defensa del trabajo final." meeting="false" start="2025-06-30" duration="1" complete="0" thirdDate="2025-06-30" thirdDate-constraint="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="" function="Default:1" contacts="" phone=""/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
