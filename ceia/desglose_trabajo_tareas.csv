@@ -1,0 +1,42 @@
+ID,Etapa Principal,Codigo Tarea,Descripcion Tarea,Horas,Nivel
+1,Etapa de investigación,1,Etapa de investigación,72,1
+1.1,Etapa de investigación,1.1,Investigar y repasar el material de la CEIA sobre técnicas de visión por computadora,40,2
+1.2,Etapa de investigación,1.2,Evaluar y contratar la API de ChatGPT,16,2
+1.3,Etapa de investigación,1.3,Evaluar y contratar la plataforma para entrenamiento con GPU,16,2
+2,Etapa de preprocesamiento y análisis exploratorio de los datos,2,Etapa de preprocesamiento y análisis exploratorio de los datos,64,1
+2.1,Etapa de preprocesamiento y análisis exploratorio de los datos,2.1,Búsqueda y selección de 3 datasets,24,2
+2.2,Etapa de preprocesamiento y análisis exploratorio de los datos,2.2,Etiquetado de imágenes,40,2
+3,Etapa del desarrollo del modelo de detección de objetos,3,Etapa del desarrollo del modelo de detección de objetos,200,1
+3.1,Etapa del desarrollo del modelo de detección de objetos,3.1,Evaluar diferentes modelos que se adecuen al problema y a los datasets,40,2
+3.2,Etapa del desarrollo del modelo de detección de objetos,3.2,Entrenar y evaluar el modelo base,40,2
+3.3,Etapa del desarrollo del modelo de detección de objetos,3.3,Realizar fine tunning del modelo base,40,2
+3.4,Etapa del desarrollo del modelo de detección de objetos,3.4,Revisión y ajustes necesarios a partir del modelo adaptado,40,2
+3.5,Etapa del desarrollo del modelo de detección de objetos,3.5,Evaluación preeliminar de resultados,16,2
+3.6,Etapa del desarrollo del modelo de detección de objetos,3.6,Desarrollo de la API para comunicación con la aplicación para celulares,16,2
+3.7,Etapa del desarrollo del modelo de detección de objetos,3.7,Pruebas unitarias y de integración de la API,8,2
+4,Etapa del desarrollo del modelo de predicción de recetas,4,Etapa del desarrollo del modelo de predicción de recetas,28,1
+4.1,Etapa del desarrollo del modelo de predicción de recetas,4.1,Desarrollo de la API para comunicación con la aplicación para celulares,8,2
+4.2,Etapa del desarrollo del modelo de predicción de recetas,4.2,Desarrollo de interacción con la API de ChatGPT,16,2
+4.3,Etapa del desarrollo del modelo de predicción de recetas,4.3,Pruebas unitarias y de integración de la API propia,4,2
+5,Etapa del desarrollo de la aplicación para celulares,5,Etapa del desarrollo de la aplicación para celulares,88,1
+5.1,Etapa del desarrollo de la aplicación para celulares,5.1,Armar la estructura general de la aplicación,16,2
+5.2,Etapa del desarrollo de la aplicación para celulares,5.2,Formulario para la carga de foto y otros datos básicos necesarios para la detección,24,2
+5.3,Etapa del desarrollo de la aplicación para celulares,5.3,Pantalla con el listado de recomendaciones,16,2
+5.4,Etapa del desarrollo de la aplicación para celulares,5.4,Pantalla con el detalle de recomendaciones,16,2
+5.5,Etapa del desarrollo de la aplicación para celulares,5.5,Pantalla con el listado histórico de recomendaciones,8,2
+5.6,Etapa del desarrollo de la aplicación para celulares,5.6,Pantalla con el detalle histórico de recomendaciones,8,2
+6,Etapa de User Acceptance Testing (UAT),6,Etapa de User Acceptance Testing (UAT),36,1
+6.1,Etapa de User Acceptance Testing (UAT),6.1,Ciclo de pruebas 1 de la aplicación para celulares,16,2
+6.2,Etapa de User Acceptance Testing (UAT),6.2,Correcciones de los defectos o errores detectados en el ciclo de pruebas 1,8,2
+6.3,Etapa de User Acceptance Testing (UAT),6.3,Ciclo de pruebas 2 de la aplicación para celulares,8,2
+6.4,Etapa de User Acceptance Testing (UAT),6.4,Correcciones de los defectos o errores detectados en el ciclo de pruebas 2,4,2
+7,Etapa de documentación,7,Etapa de documentación,56,1
+7.1,Etapa de documentación,7.1,Elaboración del manual de usuario para la aplicación para celulares,24,2
+7.2,Etapa de documentación,7.2,Elaboración del documento de arquitectura a alto nivel,8,2
+7.3,Etapa de documentación,7.3,Elaboración de reporte de métricas del modelo de detección de objeto,8,2
+7.4,Etapa de documentación,7.4,Elaboración de video o documento con ejemplo de funcionamiento de la aplicación para celular,16,2
+8,Etapa de cierre,8,Etapa de cierre,57,1
+8.1,Etapa de cierre,8.1,Redacción de informes de avance,8,2
+8.2,Etapa de cierre,8.2,Redacción de la memoria final,40,2
+8.3,Etapa de cierre,8.3,Elaboración y preparación de la presentación final,8,2
+8.4,Etapa de cierre,8.4,Defensa del trabajo final,1,2
