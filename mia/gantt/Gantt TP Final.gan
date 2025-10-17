@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-11-24" view-index="0" gantt-divider-location="673" resource-divider-location="300" version="3.3.3316" locale="en_AR">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd10" name="ID" width="53" order="0"/>
+        <field id="tpd15" name="Notes" width="20" order="1"/>
+        <field id="tpd3" name="Name" width="361" order="1"/>
+        <field id="tpd4" name="Begin date" width="85" order="2"/>
+        <field id="tpd5" name="End date" width="105" order="3"/>
+        <field id="tpd9" name="Predecessors" width="52" order="4"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="209" order="0"/>
+        <field id="1" name="Default role" width="85" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="none">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2025" month="12" date="22" type="HOLIDAY"/>
+        <date year="2025" month="12" date="23" type="HOLIDAY"/>
+        <date year="2025" month="12" date="24" type="HOLIDAY"/>
+        <date year="2025" month="12" date="25" type="HOLIDAY"/>
+        <date year="2025" month="12" date="26" type="HOLIDAY"/>
+        <date year="2025" month="12" date="27" type="HOLIDAY"/>
+        <date year="2025" month="12" date="28" type="HOLIDAY"/>
+        <date year="2025" month="12" date="29" type="HOLIDAY"/>
+        <date year="2025" month="12" date="30" type="HOLIDAY"/>
+        <date year="2025" month="12" date="31" type="HOLIDAY"/>
+        <date year="2026" month="1" date="1" type="HOLIDAY"/>
+        <date year="2026" month="1" date="2" type="HOLIDAY"/>
+        <date year="2026" month="1" date="3" type="HOLIDAY"/>
+        <date year="2026" month="1" date="4" type="HOLIDAY"/>
+        <date year="2026" month="1" date="19" type="HOLIDAY"/>
+        <date year="2026" month="1" date="20" type="HOLIDAY"/>
+        <date year="2026" month="1" date="21" type="HOLIDAY"/>
+        <date year="2026" month="1" date="22" type="HOLIDAY"/>
+        <date year="2026" month="1" date="23" type="HOLIDAY"/>
+        <date year="2026" month="1" date="24" type="HOLIDAY"/>
+        <date year="2026" month="1" date="25" type="HOLIDAY"/>
+        <date year="2026" month="1" date="26" type="HOLIDAY"/>
+        <date year="2026" month="1" date="27" type="HOLIDAY"/>
+        <date year="2026" month="1" date="28" type="HOLIDAY"/>
+        <date year="2026" month="1" date="29" type="HOLIDAY"/>
+        <date year="2026" month="1" date="30" type="HOLIDAY"/>
+        <date year="2026" month="1" date="31" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="2dad2088b92c4e7f9f926bfd3e5b165f" name="1. Etapa de investigación" meeting="false" start="2025-12-01" duration="5" complete="0" expand="true">
+            <task id="1" uid="0e65b6a404b145b8912c196c487ac81e" name="1.1 Investigar y repasar el material de la MIA  sobre técnicas de modelos largos del lenguaje." meeting="false" start="2025-12-01" duration="5" complete="0" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="2" uid="c3de043a16444d3d9b19877fc85c006c" name="1.2 Evaluar y contratar la API de ChatGPT u otro LLM." meeting="false" start="2025-12-01" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="3" uid="c62b6c061d6c4edc92a47efa4b65fc33" name="2. Etapa de preprocesamiento y análisis exploratorio de los datos" meeting="false" start="2025-12-08" duration="6" complete="0" expand="true">
+            <task id="5" uid="0820239aca4549f1a3aafa87d64d60c7" name="2.1 Búsqueda de documentos de recetas de cocina." meeting="false" start="2025-12-08" duration="5" complete="0" expand="true">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" uid="a2478d90689e4e738d7411d7cb3b5e1f" name="2.2 Aplicar RAG sobre los documentos encontrados." meeting="false" start="2025-12-15" duration="1" complete="0" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="7" uid="05d453a049a041a1a75b8f4af949bc1c" name="3. Etapa de desarrollo del modelo del agente conversacional" meeting="false" start="2025-12-16" duration="27" complete="0" expand="true">
+            <task id="8" uid="67e81cec471e44a580c3d24aa6fb9fb3" name="3.1 Evaluar diferentes modelos que se adecuen al problema." meeting="false" start="2025-12-16" duration="5" complete="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" uid="1325854acf7d47499b803d9457bd82a8" name="3.2 Desarrollar un sub agente que se comunique con el módulo existente de detección de objetos." meeting="false" start="2026-01-06" duration="3" complete="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="10" uid="09c2af44d71e49fc96e9aab9a3e63eb0" name="3.3 Desarrollar un sub agente que se comunique con el módulo existente de recomendación." meeting="false" start="2026-01-09" duration="3" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" uid="cedf51a171e84f4f8a97830a3cf651e3" name="3.4 Desarrollar un sub agente que se comunique con fuentes externas de localización de comercios." meeting="false" start="2026-01-14" duration="5" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" uid="a21cf12674c0415dabdc7d0953cbfd25" name="3.5 Desarrollar un orquestador que gestione el pedido entre los distintos agentes y los otros módulos" meeting="false" start="2026-02-04" duration="10" complete="0" expand="true">
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" uid="53d4a54224214a649846db29cc599627" name="3.6 Pruebas unitarias y de integración de la API propia." meeting="false" start="2026-02-18" duration="1" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="14" uid="9098436ed2504d1fa18390261d9ec218" name="4. Etapa de desarrollo de la aplicación para celulares" meeting="false" start="2026-02-19" duration="16" complete="0" expand="true">
+            <task id="15" uid="3b996ef30e3a48b7bf51e31950e48425" name="4.1 Armar la estructura general del chat." meeting="false" start="2026-02-19" duration="5" complete="0" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" uid="d532bf2d12334c9a8be464a62d6cb922" name="4.2 Agregar interfaz de comunicación con el orquestador." meeting="false" start="2026-02-26" duration="3" complete="0" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" uid="86c3cd36052e40c58a43a47c14347b7d" name="4.3 Agregar funcionalidades de interacción entre el usuario y los agentes." meeting="false" start="2026-03-03" duration="5" complete="0" expand="true">
+                <depend id="18" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="18" uid="b88d233ce6bb44a4920250513bff6338" name="4.4 Armar pantalla de login." meeting="false" start="2026-03-10" duration="3" complete="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="19" uid="d417302684a440c39d7aac716c7b1d29" name="5. Etapa de User Acceptance Testing (UAT)" meeting="false" start="2026-03-13" duration="5" complete="0" expand="true">
+            <task id="21" uid="c43a2eba89c74cc8895abcdf15ff75ba" name="5.1 Ciclo de pruebas 1 de la aplicación para celulares." meeting="false" start="2026-03-13" duration="2" complete="0" expand="true">
+                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="22" uid="3bc94e72fef24a9b82b659cb26cab7e7" name="5.2 Correcciones de los defectos o errores detectados en el ciclo de pruebas 1." meeting="false" start="2026-03-17" duration="1" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" uid="8b02e105bb304419a725fac749dda712" name="5.3 Ciclo de pruebas 2 de la aplicación para celulares." meeting="false" start="2026-03-18" duration="1" complete="0" expand="true">
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" uid="d7daec9edbd94f6cb1128f3e1f1b8491" name="5.4 Correcciones de los defectos o errores detectados en el ciclo de pruebas 2." meeting="false" start="2026-03-19" duration="1" complete="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="25" uid="6d2f199cf21a4882bced495df67232f5" name="6. Etapa de documentación" meeting="false" start="2026-03-20" duration="7" complete="0" expand="true">
+            <task id="26" uid="7e48eb42989946688b68a9850f852ef5" name="6.1 Elaboración del manual de usuario para la aplicación para celulares." meeting="false" start="2026-03-20" duration="3" complete="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" uid="dadd5f19bb1e4cc3a499401f0cc62426" name="6.2 Elaboración del documento de arquitectura a alto nivel." meeting="false" start="2026-03-25" duration="1" complete="0" expand="true">
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" uid="819cbdd716404ba88fb3c5ecdf7253dd" name="6.3 Elaboración de reporte de métricas del modelo de detección de objeto." meeting="false" start="2026-03-26" duration="1" complete="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" uid="10af8288a1264cc8aa11b519c3810841" name="6.4 Elaboración de video o documento con ejemplo de funcionamiento de la aplicación para celular." meeting="false" start="2026-03-27" duration="2" complete="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="30" uid="223d2b9295d34272a27d6b41b492eebb" name="7. Etapa de Cierre" meeting="false" start="2026-03-31" duration="66" complete="0" expand="true">
+            <task id="31" uid="45fbd8b19a1048e48a2ce168eaec0561" name="7.1 Redacción de informes de avance." meeting="false" start="2026-03-31" duration="1" complete="0" expand="true">
+                <depend id="32" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="32" uid="fa31bd7da40e40dcb1b4f17710e8eb79" name="7.2 Redacción de la memoria final." meeting="false" start="2026-04-01" duration="5" complete="0" expand="true">
+                <depend id="33" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" uid="99c93e3dd2bd4ecd839bea6ad65f06c4" name="7.3 Elaboración y preparación de la presentación final." meeting="false" start="2026-04-08" duration="1" complete="0" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="34" uid="b1f2a261d50849448896c4e5dd3b782a" name="7.4 Defensa del trabajo final." meeting="false" start="2026-06-30" duration="1" complete="0" thirdDate="2026-06-30" thirdDate-constraint="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Fabricio" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="10" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2026-01-20" end="2026-02-02" resourceid="0"/>
+        <vacation start="2026-01-20" end="2026-02-02" resourceid="1"/>
+        <vacation start="2025-12-23" end="2026-01-06" resourceid="1"/>
+    </vacations>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

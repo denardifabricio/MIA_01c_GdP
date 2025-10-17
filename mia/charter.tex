@@ -4,7 +4,7 @@
 ]{charter} 
 
 
-% El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
+% El título de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Desarrollo de un asistente de cocina a partir de modelos largo de lenguaje} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
@@ -171,7 +171,7 @@ Usuario final & Familiares y conocidos del responsable       & -             	& 
 
 
 \begin{itemize}
-	\item Responsable: el Ing. Fabricio Denardi es desarrollador desde hace más de 10 años y cursó la Carrera de Especialización en Inteligencia Artificial (CEIA) y la Maestría en Inteligencia Artificial (MIA), lo que le permitirá: elaborar los modelos de inteligancia artificial (IA) necesarios y el dearrollo de la aplicación junto con el despliegue de esta. Además, es un apasionado por la gastronomía.
+	\item Responsable: el Ing. Fabricio Denardi es desarrollador desde hace más de 10 años y cursó la Carrera de Especialización en Inteligencia Artificial (CEIA) y la Maestría en Inteligencia Artificial (MIA), lo que le permitirá: elaborar los modelos de inteligancia artificial (IA) necesarios y el desarrollo de la aplicación junto con el despliegue de esta. Además, es un apasionado por la gastronomía.
 	\item Orientador: el Dr. Ing. Facundo Lucianna es docente de la CEIA. Con su capacidad didáctica, colaborará con la definición de los requerimientos y aspectos técnicos, tanto de inteligencia artificial como los referidos al despliegue de la solución.
 	\item Usuario final: si bien se espera que la aplicación a futuro tenga un fin comercial y sea vendida a tantos usuarios como sean posible, en un primer momento el responsable seleccionará familiares y conocidos que cumplan este rol, intentando ser lo más riguroso posible.
 \end{itemize}
@@ -456,64 +456,6 @@ Los entregables del proyecto serán:
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-El proyecto incluye:
-\begin{itemize}
-    \item Investigación y repaso de conceptos abordados en las diferentes materias, con especial énfasis en las asignaturas de Procesamiento del Lenguaje Natural I, II y III.
-    \item Investigación y elaboración del presupuesto de los recursos necesarios para llevar a cabo el trabajo, tales como:
-    \begin{itemize}
-        \item Disponibilidad y costos de tokens de OpenAI.
-        \item Uso de APIs externas (por ejemplo, APIs de Google u otras fuentes de información relevantes).
-    \end{itemize}
-    \item Desarrollo del asistente de cocina compuesto por diversos agentes:
-    \begin{itemize}
-        \item Subagente de recomendación:
-        \begin{itemize}
-            \item Generación y sugerencia de recetas.
-            \item Consultas y sugerencias de cambios de ingredientes, variantes e instrucciones.
-        \end{itemize}
-        \item Agente de detección de objetos:
-        \begin{itemize}
-            \item Comunicación con el módulo de detección existente para recuperar los ingredientes a partir de la foto de los alimentos presentes en una heladera.
-        \end{itemize}
-        \item Agente de supermercado:
-        \begin{itemize}
-            \item Sugerencia de lugares donde adquirir los ingredientes faltantes.
-        \end{itemize}
-        \item Otros agentes:
-        \begin{itemize}
-            \item Si durante la construcción del trabajo se detectan funcionalidades adicionales de interés cuyo desarrollo no modifique significativamente el tiempo estimado de entrega, se evaluará su incorporación mediante el proceso de Gestión del Alcance.
-        \end{itemize}
-    \end{itemize}
-    \item Incorporación de una interfaz gráfica en la aplicación móvil para la interacción con el agente.
-    \item Elaboración de los manuales de arquitectura y de usuario.
-    \item Redacción y presentación de la memoria final del trabajo.
-\end{itemize}
-
-\textbf{El presente proyecto no incluye:}
-\begin{itemize}
-    \item Implementación en producción de la solución.
-    \item Implementación en entornos \textit{cloud}; el desarrollo se llevará a cabo exclusivamente en entornos locales.
-    \item Modificaciones a los módulos existentes en la aplicación, tales como:
-    \begin{itemize}
-        \item Reentrenamiento del modelo YOLO de detección de objetos.
-        \item Cambios en el módulo de recomendación.
-        \item Modificaciones en la interfaz gráfica de las pantallas ya implementadas.
-    \end{itemize}
-\end{itemize}
-
-\section{5. Supuestos del proyecto}
-\label{sec:supuestos}
-Para el proyecto se supone que:
-\begin{itemize}
-	\item El responsable contará con el tiempo extra laboral necesario para cumplir con todo el ciclo de vida del proyecto, entendiendo que el responsable del presente tiene sus obligaciones laborales y personales.
-	\item Se dispondrá del dinero para licencias, equipos de entrenamiento y todos aquellos costos necesarios para el desarrollo de la aplicación.
-	\item Se dispondrá de los accesos necesarios a todos los recursos y plataformas necesarios para el desarrollo del proyecto.
-	\item En caso que el director/orientador no pueda colaborar en algunos aspectos técnicos referidos a visión por computadora, se conseguirá un co-director especialista en la temática.
-	\item Se espera que los familiares y amigos del responsable que ofician como usuarios tendrán disponibilidad para realizar tareas de \textit{testing}.
-\end{itemize}
-\section{9. Desglose del trabajo en tareas}
-\label{sec:wbs}
-
 \begin{enumerate}
 
 \item Etapa de investigación. (56 h)
@@ -600,90 +542,31 @@ A continuación, se realiza una breve descripción del diagrama \textit{Activity
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
-\begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
-\end{figure}
-
-
-\begin{landscape}
-\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
+\includegraphics[width=1\textwidth]{./Figuras/gantt_1_1.png}\\[0.5em]
+\includegraphics[width=1\textwidth]{./Figuras/gantt_1_2.png}
+\caption{EDT.}
+\label{fig:AoN}
 \end{figure}
 
+\newpage
+\begin{landscape}
+\begin{figure}[H]
+\centering 
+\includegraphics[width=1.55\textwidth]{./Figuras/gantt_2_1.png}
+\label{fig:AoN}
+\end{figure}
 \end{landscape}
 
-\end{consigna}
+\begin{landscape}
+\begin{figure}[H]
+\centering 
+\includegraphics[width=1.5\textwidth]{./Figuras/gantt_2_2.png}
+\caption{Gantt}
+\label{fig:AoN}
+\end{figure}
+\end{landscape}
 
 
 \section{12. Presupuesto detallado del proyecto}
@@ -811,12 +694,12 @@ mitigación del riesgo.
 
 
 \textbf{Plan de mitigación de los riesgos que originalmente excedan el RPN máximo establecido}\\\\
-Riesgo 1: solicitar colaboración a instituciones educativas de gastronomía para que proveean recetas modelos, a cambio de publicidad en la aplicación.
+Riesgo 1: solicitar colaboración a instituciones educativas de gastronomía para que provean recetas modelos, a cambio de publicidad en la aplicación.
 
 Nueva asignación de S y O, con su respectiva justificación:
 \begin{itemize}
 \item Severidad (S): la severidad no cambia ya que malos datos seguirán generando malos modelos. (10)
-\item Probabilidad de ocurrencia (O): la probablidad de ocurrencia cae drásticamente ya que son imágenes que se pueden conseguir fácilmente por cualquier persona (solamente usando su dispositivo celular). (1)
+\item Probabilidad de ocurrencia (O): la probabilidad de ocurrencia cae drásticamente ya que son imágenes que se pueden conseguir fácilmente por cualquier persona (solamente usando su dispositivo celular). (1)
 \end{itemize}
 
 Riesgo 2: conseguir un codirector con conocimientos en modelos largos del lenguaje y solicitar ayuda a graduados y colegas de la CEIA o la MIA.
@@ -897,7 +780,7 @@ En cambio, las acciones de validación suelen considerar al entregable como ``ca
 	 \item Responsable: Ing. Fabricio Denardi.
 	 \item Procedimiento:
 	 \begin{enumerate}
-	 \item El responsable debe coordinar con la FUIBA la presentación y demostración pública.
+	 \item El responsable debe coordinar con la FIUBA la presentación y demostración pública.
 	 	\item El responsable debe presentar su proyecto ante los jurados y el público en general.
 	 \end{enumerate}
 	 \end{itemize}
