@@ -5,7 +5,7 @@
 
 
 % El título de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Desarrollo de un asistente de cocina a partir de modelos largo de lenguaje} 
+\titulo{Desarrollo de un asistente de cocina a partir de modelos grandes de lenguaje} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -58,7 +58,7 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-0      & Creación del documento. Se completan todos los puntos .                               &\fechaInicioName \\ \hline
+0      & Creación del documento. Se completan todos los puntos.                               &\fechaInicioName \\ \hline
 %1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un \textit{chatbot} que asista una persona en la elaboración de alimentos. El trabajo tendrá un presupuesto preliminar estimado de 609 horas y un costo estimado de \$ 129.907.360, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un \textit{chatbot} que asista a una persona en la elaboración de alimentos. El trabajo tendrá un presupuesto preliminar estimado de 609 horas y un costo estimado de \$ 129.907.360, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,52 +106,85 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El presente proyecto se enmarca en la Maestría en Inteligencia Artificial de la Universidad de Buenos Aires 
-y constituye una extensión del trabajo realizado en la Carrera de Especialización en Inteligencia Artificial (CEIA)\footnote{Trabajo Final CEIA: \url{https://lse-posgrados-files.fi.uba.ar/tesis/LSE-FIUBA-Trabajo-Final-CEIA-Fabricio-Denardi-2025.pdf}}, 
-en el cual se desarrolló una aplicación móvil capaz de detectar alimentos a partir de imágenes y recomendar 
-recetas adecuadas según los ingredientes disponibles. Este nuevo trabajo se orienta a incorporar un agente conversacional inteligente
-basado en modelos de lenguaje de gran escala, que actúe como asistente virtual de cocina, 
-brindando acompañamiento al usuario antes, durante y después del proceso culinario.
+\textbf{Objetivo} \\
+Extender el trabajo realizado en la Carrera de Especialización en Inteligencia Artificial (CEIA) titulado: \textit{Desarrollo de un sistema basado en herramientas de visión por computadoras para la recomendación de recetas a partir de fotos de alimentos}.
 
-La motivación principal del proyecto radica en la creciente demanda de soluciones tecnológicas que
- faciliten la planificación alimentaria y promuevan hábitos de cocina más sostenibles y personalizados. 
- A diferencia de las heladeras inteligentes o asistentes de cocina comerciales, que suelen requerir 
- hardware específico y presentan altos costos de implementación, la propuesta busca ofrecer una alternativa 
- accesible, adaptable y basada en software, que aproveche el potencial de los modelos de lenguaje 
- actuales para mejorar la interacción con el usuario mediante el uso de lenguaje natural.
 
-El contexto del proyecto es de carácter personal y experimental, desarrollado como un emprendimiento 
-individual. No cuenta con financiamiento externo ni acuerdos de confidencialidad o propiedad intelectual,
-aunque se prevé que los resultados puedan derivar en futuras aplicaciones comerciales o colaboraciones
-académicas.
 
-En cuanto al estado del arte, actualmente existen diversas iniciativas que integran visión por
-computadora y procesamiento de lenguaje natural para asistir en tareas culinarias. Sin embargo, 
-la mayoría se limita a la recomendación de recetas o al reconocimiento de ingredientes, sin ofrecer 
-una experiencia conversacional continua ni la posibilidad de combinar múltiples herramientas dentro 
-de una misma interacción. La innovación del presente trabajo radica en la integración de LLMs con 
-módulos funcionales existentes (detección de alimentos y recomendación de recetas) mediante el uso 
-de \textit{LangChain}, una tecnología que permite orquestar de forma dinámica la consulta de APIs,
- el manejo de contexto y la ejecución de herramientas complementarias como la conversión de unidades
-  o la búsqueda de información culinaria en tiempo real.
+\textbf{Antecedentes} \\
+En el trabajo realizado en la CEIA se diseñó y desarrolló una aplicación móvil capaz de detectar alimentos en imágenes de heladeras. A partir de los elementos identificados en las fotos, la aplicación sugería recetas de cocina relevantes.
 
-La propuesta de valor reside en la creación de un ecosistema inteligente de asistencia culinaria que 
-no solo actúe de manera reactiva ante consultas, sino que anticipe necesidades, brinde sugerencias 
-proactivas y adapte su comportamiento a los hábitos del usuario. El sistema se diseñará de manera 
-modular, permitiendo su futura expansión hacia funcionalidades más complejas como la planificación 
-semanal de comidas, el control de inventarios o la integración con dispositivos de cocina conectados.
+Este trabajo representó una alternativa flexible y de menor costo frente a las heladeras inteligentes que ya ofrecían este tipo de funcionalidades como parte de sus sistemas integrados.
 
-En la Figura~\ref{fig:DiagramaGeneral} se presenta el diagrama general de los módulos de la aplicación. Se observa que el módulo del agente conversacional se conecta tanto con el subsistema de detección de alimentos como con el de recomendación de recetas, interactuando además con un modelo de lenguaje de gran escala (LLM) a través de una capa de orquestación basada en \textit{LangChain}. Este diseño posibilita una comunicación fluida entre los distintos componentes y una experiencia coherente para el usuario final.
+Para la implementación de este trabajo fue imprescindible adquirir conocimientos en visión por computadora y en grandes modelos de lenguaje.
 
+\newpage
+\textbf{Solución propuesta}
+Se propone anexar al trabajo existente un nuevo módulo compuesto por un agente inteligente que interactúe con el usuario de la aplicación móvil antes, durante y posterior al proceso de elaboración de la receta.
+
+\textbf{Arquitectura actual}
+
+ \begin{figure}[H]
+ \centering 
+\includegraphics[width=.8\textwidth]{./Figuras/DiagramaGeneralActual.png}
+ \caption{Arquitectura actual del sistema.}
+ \label{fig:arquitectura-actual}
+ \end{figure}
+
+\textbf{Arquitectura propuesta}
+
+% Aquí iría la figura de la arquitectura propuesta si la tienes
 \begin{figure}[H]
 \centering 
 \includegraphics[width=.8\textwidth]{./Figuras/DiagramaGeneral.png}
-\caption{Diagrama general de los módulos de la aplicación.}
-\label{fig:DiagramaGeneral}
+\caption{Arquitectura propuesta del sistema.}
+\label{fig:arquitectura-propuesta}
 \end{figure}
 
+\textbf{Nuevos módulos}
 
-La experiencia previa con el plan de proyectos de la CEIA ha proporcionado  una base sólida en la gestión de proyectos y se utilizó como bitácora de recursos para la confección de este plan.
+\textbf{Login}
+
+
+Gestión del inicio de sesión e identificación del usuario. Esto será sumamente importante para interactuar con el módulo de preferencias ya que se debe identificar al usuario para recordar sus preferencias.
+
+\newpage
+\textbf{Gestión de preferencias}
+
+
+Módulo que almacenará y gestionará las preferencias del usuario, entre las cuales se encontrarán:
+\begin{itemize}
+    \item Tipos de comida: india, peruana, sushi, argentina, asado, etc.
+    \item Restricciones alimentarias: alimentos aptos para celíacos, diabéticos, hipertensos, etc.
+    \item Alimentos y/o recetas preferidas.
+\end{itemize}
+
+\textbf{Asistente de cocina}
+Será el corazón del proyecto. El objetivo es que acompañe al usuario durante todo el proceso de elaboración del alimento. Se espera que, como mínimo, el asistente sea capaz de:
+
+\begin{itemize}
+    \item Describir el paso a paso de la elaboración de una receta.
+    \item Responder al usuario preguntas, dudas, comentarios, sobre cada paso, tales como:
+    \begin{itemize}
+        \item Reemplazo de ingredientes.
+        \item Búsqueda de lugares cercanos para adquirir ingredientes faltantes.
+        \item Variantes de recetas.
+        \item Recomendaciones sobre las instrucciones.
+    \end{itemize}
+    \item Conectarse directamente con los módulos existentes de detección de objetos y recomendación de recetas para realizar la interacción desde el chat con el agente sin necesidad de irse a las otras pantallas.
+\end{itemize}
+
+\textbf{Capas del agente}
+Se sugiere inicialmente este modelo de capas e interacción entre subagentes, recursos, etc:
+
+% Aquí iría la figura del modelo de capas si la tienes
+\begin{figure}[H]
+\centering 
+\includegraphics[width=.8\textwidth]{./Figuras/CapasSistema.png}
+\caption{Modelo de capas del agente.}
+\label{fig:capas-agente}
+\end{figure}
+
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
@@ -171,7 +204,7 @@ Usuario final & Familiares y conocidos del responsable       & -             	& 
 
 
 \begin{itemize}
-	\item Responsable: el Ing. Fabricio Denardi es desarrollador desde hace más de 10 años y cursó la Carrera de Especialización en Inteligencia Artificial (CEIA) y la Maestría en Inteligencia Artificial (MIA), lo que le permitirá: elaborar los modelos de inteligancia artificial (IA) necesarios y el desarrollo de la aplicación junto con el despliegue de esta. Además, es un apasionado por la gastronomía.
+	\item Responsable: el Ing. Fabricio Denardi es desarrollador desde hace más de 10 años y cursó la Carrera de Especialización en Inteligencia Artificial (CEIA) y la Maestría en Inteligencia Artificial (MIA), lo que le permitirá: elaborar los modelos de inteligencia artificial (IA) necesarios y el desarrollo de la aplicación junto con el despliegue de esta. Además, es un apasionado por la gastronomía.
 	\item Orientador: el Dr. Ing. Facundo Lucianna es docente de la CEIA. Con su capacidad didáctica, colaborará con la definición de los requerimientos y aspectos técnicos, tanto de inteligencia artificial como los referidos al despliegue de la solución.
 	\item Usuario final: si bien se espera que la aplicación a futuro tenga un fin comercial y sea vendida a tantos usuarios como sean posible, en un primer momento el responsable seleccionará familiares y conocidos que cumplan este rol, intentando ser lo más riguroso posible.
 \end{itemize}
@@ -375,63 +408,55 @@ Incertidumbre: alta. (8 puntos)\\
 \textit{Story points:} 21 puntos.
 
 Historia de usuario 6 \\
-Como usuario, quiero poder recibir del agente una lista de comercios para comprar los ingredientes faltantes de mi receta. \\
-Cantidad de trabajo: alta. (5 puntos)\\
-Complejidad: alta. (5 puntos)\\
-Incertidumbre: alta. (8 puntos)\\
-\textit{Story points:} 21 puntos.
-
-
-Historia de usuario 7 \\
 Como usuario, quiero poder recibir del agente recomendaciones de nutrición para adecuarme a las necesidades de mi dieta. \\
 Cantidad de trabajo: alta. (5 puntos)\\
 Complejidad: alta. (5 puntos)\\
 Incertidumbre: alta. (8 puntos)\\
 \textit{Story points:} 21 puntos.
 
-Historia de usuario 8 \\
+Historia de usuario 7 \\
 Como usuario, quiero poder recibir del agente una lista de ingredientes de reemplazo para cocinar de acuerdo a mis preferencias. \\
 Cantidad de trabajo: media. (3 puntos)\\
 Complejidad: media. (3 puntos)\\
 Incertidumbre: baja. (1 punto)\\
 \textit{Story points:} 8 puntos.
 
-Historia de usuario 9 \\
+Historia de usuario 8 \\
 Como usuario, quiero poder recibir del agente una lista de variantes de recetas para cocinar de acuerdo a mis preferencias. \\
 Cantidad de trabajo: media. (3 puntos)\\
 Complejidad: media. (3 puntos)\\
 Incertidumbre: baja. (1 punto)\\
 \textit{Story points:} 8 puntos.
 
-Historia de usuario 10 \\
+Historia de usuario 9 \\
 Como usuario, quiero poder recibir del agente recomendaciones sobre las instrucciones de las recetas devueltas por el módulo de recomendación para guiarme en la cocción del alimento. \\
 Cantidad de trabajo: alta. (5 puntos)\\
 Complejidad: alta. (5 puntos)\\
 Incertidumbre: alta. (8 puntos)\\
 \textit{Story points:} 21 puntos.
 
-Historia de usuario 11 \\
+Historia de usuario 10 \\
 Como usuario, quiero poder contar con un manual básico que muestre el uso de la aplicación para celulares.\\
 Cantidad de trabajo: baja. (1 punto)\\
-Complejidad: media. (1 punto)\\
+Complejidad: baja. (1 punto)\\
 Incertidumbre: baja. (1 punto)\\
 \textit{Story points:} 3 puntos.
 
-Historia de usuario 12 \\
+Historia de usuario 11 \\
 Como desarrollador, quiero poder contar con un manual para consultar las métricas del modelo de detección.\\
 Cantidad de trabajo: baja. (1 punto)\\
 Complejidad: baja. (1 punto)\\
 Incertidumbre: baja. (1 punto)\\
 \textit{Story points:} 3 puntos.
 
-Historia de usuario 13 \\
+Historia de usuario 12 \\
 Como desarrollador, quiero poder contar con un documento técnico para consultar la arquitectura básica del sistema.\\
 Cantidad de trabajo: baja. (1 punto)\\
 Complejidad: baja. (1 punto)\\
 Incertidumbre: baja. (1 punto)\\
 \textit{Story points:} 3 puntos.
 
-Historia de usuario 14 \\
+Historia de usuario 13 \\
 Como usuario, quiero poder contar con un video o documento para visualizar un ejemplo \textit{end-to-end} del uso de la aplicación para celulares.\\
 Cantidad de trabajo: baja. (1 punto)\\
 Complejidad: baja. (1 punto)\\
@@ -460,7 +485,7 @@ Los entregables del proyecto serán:
 
 \item Etapa de investigación. (56 h)
     \begin{enumerate}
-        \item Investigar y repasar el material de la Maestría en Inteligencia Artificial sobre técnicas de modelos largos del lenguaje. (40 h)
+        \item Investigar y repasar el material de la Maestría en Inteligencia Artificial sobre técnicas de modelos grandes de lenguaje. (40 h)
         \item Evaluar y contratar la API de ChatGPT u otro LLM. (16 h)
     \end{enumerate}
 
@@ -626,7 +651,7 @@ Descripción &
    &
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{ARS 10.885.362} \\ \hline
+  \multicolumn{1}{c|}{ARS 21.634.560,00} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} & ARS 129.807.360,00
    \\ \hline
@@ -679,7 +704,7 @@ Riesgo 5: no conseguir suficientes amigos y familiares que oficien como usuarios
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 Riesgo 1: no contar con suficientes documentos de recetas para construir la base de datos vectoriales y el RAG.      & 10   & 8  &  80   & 10   &  1  &   10   \\ \hline
-Riesgo 2: falta de conocimientos técnicos para la realización del modelo de detección de objetos.     & 7  & 7  &  49   & 7   &  2  &    14  \\ \hline
+Riesgo 2: falta de conocimientos técnicos para la realización del agente.     & 7  & 7  &  49   & 7   &  2  &    14  \\ \hline
 Riesgo 3: no contar con dinero suficiente para afrontar el presupuesto del proyecto.       & 9  & 2  &   18  &    &    &      \\ \hline
 Riesgo 4: no cumplir con los tiempos de finalización del proyecto.       &  2 & 10  &   20  &    &    &      \\ \hline
 Riesgo 5: no conseguir suficientes amigos y familiares que oficien como usuarios finales.       & 5  &  2 &    10 &    &    &      \\ \hline
@@ -699,10 +724,10 @@ Riesgo 1: solicitar colaboración a instituciones educativas de gastronomía par
 Nueva asignación de S y O, con su respectiva justificación:
 \begin{itemize}
 \item Severidad (S): la severidad no cambia ya que malos datos seguirán generando malos modelos. (10)
-\item Probabilidad de ocurrencia (O): la probabilidad de ocurrencia cae drásticamente ya que son imágenes que se pueden conseguir fácilmente por cualquier persona (solamente usando su dispositivo celular). (1)
+\item Probabilidad de ocurrencia (O): la probabilidad de ocurrencia cae drásticamente ya que son documentos que se pueden conseguir fácilmente por cualquier persona navegando por páginas gastronómicas. (1)
 \end{itemize}
 
-Riesgo 2: conseguir un codirector con conocimientos en modelos largos del lenguaje y solicitar ayuda a graduados y colegas de la CEIA o la MIA.
+Riesgo 2: conseguir un codirector con conocimientos en modelos grandes de lenguaje y solicitar ayuda a graduados y colegas de la CEIA o la MIA.
 
 Nueva asignación de S y O, con su respectiva justificación:
 \begin{itemize}
@@ -714,26 +739,103 @@ Nueva asignación de S y O, con su respectiva justificación:
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
+
+A continuación, se enumeran los diez requerimientos más importantes del proyecto y su correspondiente procedimiento de verificación y validación. 
 
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+
+% Inicio Req 
+\item Req \#1.1.1: se deben utilizar, al menos, 3 datasets de fotos de heladeras con alimentos o alimentos sueltos (por ejemplo arriba de una mesada).
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item Verificación: se deberá chequear que los 3 dataset provengan de diferentes accesos y autores. Pueden estar en el mismo repositorio o página web.
+	\item Validación: se revisará con el orientador del trabajo final si los datasets son adecuados para el entrenamiento.
 \end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#1.1.5: el sistema, mediante el entrenamiento de un modelo de visión por computadoras, debe detectar alimentos en la imagen recibida y devolverlas en forma de lista.
+
+\begin{itemize}
+	\item Verificación: se deberán programar rutinas de \textit{testing} para observar si el algoritmo es capaz de detectar los alimentos presentes.
+	\item Validación: se revisará con el orientador del trabajo final si la \textit{performance} del modelo es adecuada.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#1.2.1: el sistema debe recibir una lista de alimentos (ingredientes) y devolver una lista de posibles recetas de cocina que contengan algunos de estos. 
+
+\begin{itemize}
+	\item Verificación: se deberá programar rutinas de \textit{testing} para observar si la aplicación es capaz de devolver las recetas en el formato solicitado.
+	\item Validación: se consultará con familiares y amigos que les guste cocinar para determinar si las recetas entregadas guardan relación con los alimentos enviados como parámetros.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#1.2.2: se debe desarrollar una interacción con las API de Chat GPT para que este realice la recomendación.
+
+\begin{itemize}
+	\item Verificación: se deberá programar rutinas de \textit{testing} para observar si la interacción con Chat GPT es correcta.
+	\item Validación: se consultará con el orientador del trabajo final si el resultado de la interacción con la API es la esperada.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#1.3.2: el sistema debe listar las recomendaciones que el módulo de recomendación devuelva.
+
+\begin{itemize}
+	\item Verificación: se deberá realizar una captura de pantalla de la aplicación para celulares donde se muestre una lista de recomendaciones.
+	\item Validación: se consultará con familiares y amigos que les guste cocinar si la lista brindada guarda relación con receta de alimentos.
+\end{itemize}
+% Fin Req 
+% Inicio Req 
+\item Req \#2.1: se debe poder contar con un repositorio en GitHub con todo el código fuente de todos los módulos.
+
+\begin{itemize}
+	\item Verificación: se deberá contar con un repositorio y se deberá realizar una captura de pantalla donde se muestre una carpeta con todos los módulos del proyecto.
+	\item Validación: el orientador del trabajo final revisará el código fuente del repositorio y determinará si es correcto o no.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#2.4: los diferentes módulos deben estar organizados en docker containers.
+
+\begin{itemize}
+	\item Verificación: se deberán agregar los archivos \textit{dockerfiles} y \textit{dockercompose} e imprimir una captura de pantalla de dichos archivos.
+	\item Validación: el orientador del trabajo final revisará el código fuente y determinará si tiene los archivos necesarios para la gestión de los módulos utilizando docker containers.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#3.1: se debe elaborar un diagrama a alto nivel con el diseño de la arquitectura del sistema.
+
+\begin{itemize}
+	\item Verificación: se debe realizar un documento que tiene que estar disponible en el repositorio de código.
+	\item Validación: el orientador del trabajo final revisará el documento de diseño alojado en el repositorio y determinará si tiene el formato y contenido correcto.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#3.2: el usuario debe poder contar con un manual de usuario de la aplicación para dispositivos celulares.
+
+\begin{itemize}
+	\item Verificación: se debe realizar un manual que tiene que estar disponible en el repositorio.
+	\item Validación: el orientador del trabajo final revisará el manual alojado en el repositorio y determinará si tiene el formato y contenido esperado para un manual de usuario.
+\end{itemize}
+% Fin Req 
+
+% Inicio Req 
+\item Req \#4.1: el usuario final debe evaluar y certificar la aplicación a desarrollar.
+
+\begin{itemize}
+	\item Verificación: se debe contar con la aprobación formal por medio de un correo electrónico del usuario final.
+	\item Validación: el director del trabajo final debe revisar el correo electrónico y determinar si la aplicación a desarrollar fue aprobada por el usuario.
+\end{itemize}
+% Fin Req 
+
+
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
